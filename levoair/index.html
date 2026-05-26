@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LevoAir &middot; Tesla Model 3 Custom Wraps</title>
+<style>
+  :root{
+    --gold:#E6B325; --gold-deep:#F2A818; --bg:#0D0D0D; --card:#141414;
+    --line:#262626; --text:#EDEDED; --muted:#9a9a9a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  a{color:var(--gold);text-decoration:none}
+  header{padding:54px 24px 34px;text-align:center;
+         background:radial-gradient(1200px 380px at 50% -120px,rgba(230,179,37,.16),transparent);}
+  header img{height:54px;margin-bottom:18px;filter:drop-shadow(0 4px 16px rgba(0,0,0,.6))}
+  header h1{margin:0;font-size:30px;font-weight:800;letter-spacing:.5px}
+  header h1 span{color:var(--gold)}
+  header p{margin:10px auto 0;max-width:640px;color:var(--muted);line-height:1.55}
+  .wrap{max-width:1120px;margin:0 auto;padding:24px}
+  .grid{display:grid;grid-template-columns:1fr;gap:28px}
+  @media(min-width:820px){.grid{grid-template-columns:1fr 1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+        overflow:hidden;display:flex;flex-direction:column;
+        box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .card .mock{background:#f4f5f7;}
+  .card .mock img{width:100%;display:block}
+  .card .body{padding:18px 20px 22px}
+  .card h2{margin:0 0 4px;font-size:20px}
+  .card h2 .dot{color:var(--gold)}
+  .card .desc{color:var(--muted);font-size:14px;line-height:1.55;margin:0 0 16px}
+  .card .foot{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .thumb{width:88px;height:88px;border-radius:10px;border:1px solid var(--line);
+         object-fit:cover;background:#fff}
+  .btn{margin-left:auto;background:linear-gradient(135deg,var(--gold),var(--gold-deep));
+       color:#1a1404;font-weight:700;padding:11px 18px;border-radius:10px;font-size:14px;
+       box-shadow:0 4px 14px rgba(230,179,37,.25)}
+  .btn:hover{filter:brightness(1.06)}
+  .tag{display:inline-block;font-size:11px;letter-spacing:.6px;text-transform:uppercase;
+       color:var(--gold);border:1px solid rgba(230,179,37,.4);padding:3px 9px;
+       border-radius:99px;margin-bottom:10px}
+  section.info{margin-top:46px;background:var(--card);border:1px solid var(--line);
+       border-radius:16px;padding:26px 28px}
+  section.info h3{margin:0 0 14px;color:var(--gold)}
+  section.info ol{margin:0;padding-left:20px;line-height:1.9;color:#cfcfcf}
+  code{background:#000;border:1px solid var(--line);padding:2px 7px;border-radius:6px;color:var(--gold)}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px 60px}
+  .note{color:var(--muted);font-size:12.5px;margin-top:10px}
+</style>
+</head>
+<body>
+<header>
+  <img src="brand/levoair_logo.png" alt="LevoAir logo" />
+  <h1>Tesla Model 3 <span>&middot;</span> LevoAir Custom Wraps</h1>
+  <p>Brand-grey paint with LevoAir gold accents, a drone emblem on the hood and the
+     official LevoAir wordmark on the doors. Built for the <b>Model 3 (2024+) base</b>
+     Paint Shop wrap template. Four designs &mdash; preview them on a car below, then
+     download the wrap file.</p>
+</header>
+
+<div class="wrap">
+  <div class="grid" id="grid"></div>
+
+  <section class="info">
+    <h3>How to apply on your Tesla</h3>
+    <ol>
+      <li>Download a wrap <code>.png</code> (button on each design).</li>
+      <li>Format a USB drive (exFAT/FAT32) and create a folder named <code>Wraps</code> at the root.</li>
+      <li>Copy the PNG file(s) into the <code>Wraps</code> folder (up to 10, each &le; 1&nbsp;MB).</li>
+      <li>In the car: <b>Toybox &rarr; Paint Shop &rarr; Wraps</b>, then select your LevoAir design.</li>
+    </ol>
+    <p class="note">Mockups are stylised side-profile previews to communicate colour, accent
+       placement, drone and logo &mdash; the actual on-car result is rendered by the vehicle's
+       3D Paint Shop from the wrap PNG. Logo is the official LevoAir wordmark; the door logo is
+       mirrored on the driver side in the texture so it reads correctly on the physical car.</p>
+  </section>
+</div>
+
+<footer>
+  LevoAir &mdash; Professional Drone Data Collection &middot;
+  Brand gold <code>#E6B325</code> / <code>#F2A818</code> &middot;
+  <a href="https://github.com/mncoleman/custom-wraps">custom-wraps repository</a>
+</footer>
+
+<script>
+const designs = [
+  { name:"LevoAir_Stealth_Grey", title:"Stealth Grey", tag:"Signature",
+    desc:"Gunmetal grey gradient with a single bold gold diagonal swoosh flowing over the hood and along the body. Gold drone emblem on the hood, LevoAir wordmark on both doors." },
+  { name:"LevoAir_Gold_Edge", title:"Gold Edge", tag:"Bold",
+    desc:"Deep charcoal grey with a clean gold rocker stripe wrapping the lower body. Front-and-centre hood drone and crisp door wordmarks." },
+  { name:"LevoAir_Carbon_Drone", title:"Carbon Drone", tag:"Tech",
+    desc:"Woven carbon-grey finish with twin gold pinstripes and an oversized gold drone hero on the hood &mdash; the most aggressive, drone-forward look." },
+  { name:"LevoAir_Aerial_TwoTone", title:"Aerial Two-Tone", tag:"Clean",
+    desc:"Light-grey upper split from a charcoal lower by a gold beltline. Understated, premium and unmistakably LevoAir." },
+];
+const grid = document.getElementById('grid');
+for(const d of designs){
+  grid.insertAdjacentHTML('beforeend', `
+    <div class="card">
+      <div class="mock"><img src="mockups/${d.name}.png" alt="${d.title} on a Tesla Model 3" loading="lazy"></div>
+      <div class="body">
+        <span class="tag">${d.tag}</span>
+        <h2>${d.title} <span class="dot">&middot;</span></h2>
+        <p class="desc">${d.desc}</p>
+        <div class="foot">
+          <img class="thumb" src="../model3-2024-base/example/${d.name}.png" alt="${d.title} wrap file">
+          <a class="btn" href="../model3-2024-base/example/${d.name}.png" download>Download wrap</a>
+        </div>
+      </div>
+    </div>`);
+}
+</script>
+</body>
+</html>
