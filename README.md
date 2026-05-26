@@ -2,6 +2,8 @@
 
 This repository provides templates and examples for creating custom wrap designs for your Tesla's 3D vehicle visualization. Personalize your car's appearance in the Paint Shop with your own unique designs.
 
+> **Featured collection: [LevoAir &rarr;](levoair/)** &mdash; brand-grey Model 3 (2024+) wraps with LevoAir gold accents, a hood drone emblem and the official LevoAir wordmark, complete with on-car mockups and an interactive gallery.
+
 ## How to Use Custom Wraps
 
 1. **Download** the template for your specific vehicle model (see links below)
